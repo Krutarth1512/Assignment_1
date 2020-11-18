@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/movie_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/movie_image"
+        tools:text="Title" />
+
+    <TextView
+        android:id="@+id/ratings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:text="Rated 4.5" />
+
+    <TextView
+        android:id="@+id/summary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="5"
+        app:layout_constraintEnd_toEndOf="@id/ratings"
+        app:layout_constraintStart_toStartOf="@id/ratings"
+        app:layout_constraintTop_toBottomOf="@id/ratings"
+        tools:text="@tools:sample/lorem/random" />
+
+    <ImageView
+        android:id="@+id/movie_image"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="2:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/joker" />
+</androidx.constraintlayout.widget.ConstraintLayout>
